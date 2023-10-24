@@ -8,7 +8,6 @@ public class AlumnoInternacional extends Alumno{
 
 
     /*----------GETTER-SETTER----------*/
-
     public String getPais() {
         return pais;
     }
@@ -25,5 +24,20 @@ public class AlumnoInternacional extends Alumno{
         this.notaIdiomas = notaIdiomas;
     }
     /*----------GETTER-SETTER----------*/
+
+    /*----------CONSTRUCTOR----------*/
+    public AlumnoInternacional() {
+        System.out.println("AlumnoInternacional : Inicializando constructor ...");
+    }
+
+    public  AlumnoInternacional(String nombre, String apellido){
+        super(nombre, apellido);
+    }
+
+    public AlumnoInternacional(String nombre, String apellido, String pais){
+        super(nombre, apellido);
+        this.pais = pais;
+    }
+    /*----------CONSTRUCTOR----------*/
 
 }

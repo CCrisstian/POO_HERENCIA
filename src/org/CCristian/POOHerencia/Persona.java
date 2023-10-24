@@ -9,7 +9,6 @@ public class Persona {
     /*----------ATRIBUTOS----------*/
 
     /*----------GETTER-SETTER----------*/
-
     public String getNombre() {
         return nombre;
     }
@@ -42,5 +41,23 @@ public class Persona {
         this.email = email;
     }
     /*----------GETTER-SETTER----------*/
+
+
+    /*----------CONSTRUCTOR----------*/
+    public Persona() {
+        System.out.println("Persona : Inicializando constructor ...");
+    }
+
+    public Persona(String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public  Persona(String nombre, String apellido, int edad){
+        this(nombre, apellido);
+        this.edad = edad;
+    }
+    /*----------CONSTRUCTOR----------*/
+
 
 }
