@@ -32,4 +32,17 @@ public class Profesor extends Persona{
     }
     /*----------CONSTRUCTOR----------*/
 
+    /*----------MÉTODO----------*/
+    @Override
+    public String Saludar() {
+        return "Buenos días soy el profesor "+getNombre()+" "+getApellido()+" de la asignatura "+getAsignatura();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +"\nAsignatura = " +asignatura;
+    }
+
+    /*----------MÉTODO----------*/
+
 }

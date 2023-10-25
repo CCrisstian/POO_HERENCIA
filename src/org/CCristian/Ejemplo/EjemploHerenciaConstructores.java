@@ -22,18 +22,21 @@ public class EjemploHerenciaConstructores {
         alumnoInt.setEmail("AlumnoInternacional@correo.electronico");
 
 
-        System.out.println("\n==================Creando la instancia de la clase Profesor==================");
+        System.out.println("\n==================Creando la instancia de la clase Profesor==================\n");
         Profesor profesor = new Profesor("Fefe","Torres","Matemáticas");
         profesor.setEdad(33);
         profesor.setEmail("FEFE@correo.electronico");
 
+
+        System.out.println("\n==========================================================\n");
         Imprimir(alumno);
         System.out.println("\n==========================================================\n");
         Imprimir(alumnoInt);
-        System.out.println("\n==========================================================");
+        System.out.println("\n==========================================================\n");
         Imprimir(profesor);
 
     }
+
     /*----------------Control de tipos----------------*/
     public static void Imprimir(Persona persona){
         System.out.println("Imprimiendo datos en común de la clase Persona"+
@@ -44,22 +47,29 @@ public class EjemploHerenciaConstructores {
 
         if (persona instanceof Alumno){
             System.out.println("\nImprimiendo datos de la clase Alumno");
-            System.out.println("\nInstitución: "+((Alumno) persona).getInstitucion());
-            System.out.println("\nNota Castellano: "+ ((Alumno) persona).getNotaCastellano());
-            System.out.println("\nNota Historia: "+ ((Alumno) persona).getNotaHistoria());
-            System.out.println("\nNota Matemática: "+((Alumno) persona).getNotaMatematica());
+            System.out.println("Institución: "+((Alumno) persona).getInstitucion());
+            System.out.println("Nota Castellano: "+ ((Alumno) persona).getNotaCastellano());
+            System.out.println("Nota Historia: "+ ((Alumno) persona).getNotaHistoria());
+            System.out.println("Nota Matemática: "+((Alumno) persona).getNotaMatematica());
 
             if (persona instanceof AlumnoInternacional){
                 System.out.println("\nImprimiendo datos de la clase Alumno Internacional");
-                System.out.println("\nNota Idiomas: "+((AlumnoInternacional) persona).getNotaIdiomas());
-                System.out.println("\nPaís: "+((AlumnoInternacional) persona).getPais());
+                System.out.println("Nota Idiomas: "+((AlumnoInternacional) persona).getNotaIdiomas());
+                System.out.println("País: "+((AlumnoInternacional) persona).getPais());
             }
+            System.out.println("======Calcular Promedio======");
+            System.out.println("Promedio : "+((Alumno) persona).CalcularPromedio());
         }
+
 
         if (persona instanceof Profesor){
             System.out.println("\nImprimiendo datos de la clase Profesor");
-            System.out.println("\nAsignatura: "+((Profesor) persona).getAsignatura());
+            System.out.println("Asignatura: "+((Profesor) persona).getAsignatura());
         }
+
+        System.out.println("======Sobre escritura Saludar======");
+        System.out.println(persona.Saludar());
+
     }
     /*----------------Control de tipos----------------*/
 }

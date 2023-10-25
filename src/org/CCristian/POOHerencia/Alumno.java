@@ -70,4 +70,30 @@ public class Alumno extends Persona{
         this.NotaHistoria = notaHistoria;
     }
     /*----------CONSTRUCTOR----------*/
+
+
+    /*----------MÉTODO----------*/
+        @Override
+        public String Saludar(){
+            String saludo = super.Saludar();
+            return saludo+" soy un alumno y mi nombre es " +getNombre()+" "+getApellido();
+        }
+
+        public double CalcularPromedio(){
+            System.out.println(Alumno.class.getCanonicalName());
+            return (NotaHistoria + NotaCastellano + NotaMatematica)/3;
+        }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nInstitución = " +institucion+
+                "\nNotaMatemática = " +NotaMatematica+
+                "\nNotaCastellano = " +NotaCastellano+
+                "\nNotaHistoria = " +NotaHistoria+
+                "\nPromedio = "+this.CalcularPromedio();
+    }
+
+    /*----------MÉTODO----------*/
+
 }

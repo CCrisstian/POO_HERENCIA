@@ -59,5 +59,21 @@ public class Persona {
     }
     /*----------CONSTRUCTOR----------*/
 
+    /*----------MÉTODO----------*/
+        public String Saludar(){
+            return "Hola, que tal!";
+        }
+
+    @Override
+    public String toString() {
+        return Saludar() +
+                "\nNombre = " +nombre+
+                "\nApellido = "+apellido+
+                "\nEdad = "+edad+
+                "\nEmail = "+email;
+    }
+
+    /*----------MÉTODO----------*/
+
 
 }

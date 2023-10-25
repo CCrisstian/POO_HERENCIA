@@ -25,6 +25,7 @@ public class AlumnoInternacional extends Alumno{
     }
     /*----------GETTER-SETTER----------*/
 
+
     /*----------CONSTRUCTOR----------*/
     public AlumnoInternacional() {
         System.out.println("AlumnoInternacional : Inicializando constructor ...");
@@ -39,5 +40,27 @@ public class AlumnoInternacional extends Alumno{
         this.pais = pais;
     }
     /*----------CONSTRUCTOR----------*/
+
+
+    /*----------MÉTODO----------*/
+    @Override
+    public String Saludar() {
+        return super.Saludar()+", soy extranjero y vengo de "+getPais();
+    }
+
+    @Override
+    public double CalcularPromedio() {
+        System.out.println(AlumnoInternacional.class.getCanonicalName());
+        return ((super.CalcularPromedio())*3 + notaIdiomas) / 4;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nPais = "+pais+
+                "\nnotaIdiomas = "+notaIdiomas;
+    }
+
+    /*----------MÉTODO----------*/
 
 }
