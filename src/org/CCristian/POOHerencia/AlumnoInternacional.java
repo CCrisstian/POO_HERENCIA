@@ -1,6 +1,6 @@
 package org.CCristian.POOHerencia;
 
-public class AlumnoInternacional extends Alumno{
+public final class AlumnoInternacional extends Alumno{
     /*----------ATRIBUTOS----------*/
         private String pais;
         private double notaIdiomas;
